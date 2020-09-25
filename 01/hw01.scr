@@ -1,0 +1,27 @@
+Script started on 2020-09-03 17:38:48-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;reaper@REAPER: ~/hw/01[01;32mreaper@REAPER[00m:[01;34m~/hw/01[00m$ g++ hw01 [K[K1.cpp -o hw01
+]0;reaper@REAPER: ~/hw/01[01;32mreaper@REAPER[00m:[01;34m~/hw/01[00m$ ls -la
+total 64
+drwxrwxr-x 2 reaper reaper  4096 Sep  3 17:39 [0m[01;34m.[0m
+drwxrwxr-x 3 reaper reaper  4096 Aug 27 19:38 [01;34m..[0m
+-rwxrwxr-x 1 reaper reaper 18008 Sep  3 17:39 [01;32mhw01[0m
+-rw-rw-r-- 1 reaper reaper   432 Sep  3 17:28 hw01.cpp
+-rw-rw-r-- 1 reaper reaper   558 Sep  3 17:38 hw01.h
+-rw-rw-r-- 1 reaper reaper     0 Sep  3 17:38 hw01.scr
+-rwxrwxr-x 1 reaper reaper 18496 Aug 27 19:56 [01;32mSource[0m
+-rw-rw-r-- 1 reaper reaper   435 Aug 27 19:40 source.cpp
+-rw-rw-r-- 1 reaper reaper    83 Aug 25 22:51 source.h
+]0;reaper@REAPER: ~/hw/01[01;32mreaper@REAPER[00m:[01;34m~/hw/01[00m$ ./hw01
+Mass 1: 1000
+Mass 2: 1000
+Distance: 10
+Force: 0.000667
+]0;reaper@REAPER: ~/hw/01[01;32mreaper@REAPER[00m:[01;34m~/hw/01[00m$ stop
+
+Command 'stop' not found, but there are 18 similar ones.
+
+]0;reaper@REAPER: ~/hw/01[01;32mreaper@REAPER[00m:[01;34m~/hw/01[00m$ ^C
+]0;reaper@REAPER: ~/hw/01[01;32mreaper@REAPER[00m:[01;34m~/hw/01[00m$ exit
+exit
+
+Script done on 2020-09-03 17:39:40-07:00 [COMMAND_EXIT_CODE="130"]

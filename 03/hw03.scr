@@ -1,0 +1,60 @@
+Script started on 2020-09-24 19:26:15-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="136" LINES="52"]
+]0;reaper@REAPER: ~/hw/03[01;32mreaper@REAPER[00m:[01;34m~/hw/03[00m$ ls
+[0m[01;32mhw03[0m  hw03.cpp  hw03.h  hw03.scr  inctax.cpp  inctax.h  inctax.o  Makefile
+]0;reaper@REAPER: ~/hw/03[01;32mreaper@REAPER[00m:[01;34m~/hw/03[00m$ make all
+make: Nothing to be done for 'all'.
+]0;reaper@REAPER: ~/hw/03[01;32mreaper@REAPER[00m:[01;34m~/hw/03[00m$ touch hw03.cpp
+]0;reaper@REAPER: ~/hw/03[01;32mreaper@REAPER[00m:[01;34m~/hw/03[00m$ make all
+g++ hw03.cpp -o hw03 inctax.o
+]0;reaper@REAPER: ~/hw/03[01;32mreaper@REAPER[00m:[01;34m~/hw/03[00m$ ./hw03
+----------------------------------------------------
+|                                                  |
+|               Tax Income Calculator              |
+|                                                  |
+----------------------------------------------------
+
+Tax payer's fullname: Zachary Meyer
+Tax year: 2020
+
+How many sources of income are you entering: 2
+Income description: Syntiant, Inc.
+Income amount: 1250000 
+Income description: Phi-Sight, Inc.
+Income amount: 12500
+
+How many expenses do you have: 2
+Expense description: Rent
+Expense cost: 20000
+Expense description: Utilti  ities
+Expense cost: 2500
+
+How many dependencies do you have: 1
+Dependency Name: Joseph Masochist
+What is your relationship to Joseph Masochist? Son
+
+
+2020 annual report for Zachary Meyer
+
+-- Yearly Income --
+Income [1]: Syntiant, Inc., $125000
+Income [2]: Phi-Sight, Inc., $12500
+
+
+-- Yearly Expenses --
+Expense [1]: Rent, $20000
+Expense [2]: Utilities, $2500
+
+
+-- Dependencies --
+Dependency [1]: Joseph Masochist, Son
+
+
+-- Yearly Summary --
+Total income: $137500
+Total expenses: $22500
+Dependencies: 1
+Total taxes due: $20160
+]0;reaper@REAPER: ~/hw/03[01;32mreaper@REAPER[00m:[01;34m~/hw/03[00m$ exit
+exit
+
+Script done on 2020-09-24 19:27:26-07:00 [COMMAND_EXIT_CODE="0"]
