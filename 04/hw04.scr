@@ -1,0 +1,105 @@
+Script started on 2020-10-01 17:10:36-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="107" LINES="45"]
+]0;reaper@REAPER: ~/CS1B/04[01;32mreaper@REAPER[00m:[01;34m~/CS1B/04[00m$ ls -la
+total 60
+drwxrwxr-x 2 reaper reaper 4096 Oct  1 17:10 [0m[01;34m.[0m
+drwxrwxr-x 7 reaper reaper 4096 Oct  1 14:43 [01;34m..[0m
+-rw-rw-r-- 1 reaper reaper 1754 Oct  1 17:07 hw04.cpp
+-rw-rw-r-- 1 reaper reaper  731 Oct  1 17:06 hw04f1.cpp
+-rw-rw-r-- 1 reaper reaper  726 Oct  1 17:06 hw04f2.cpp
+-rw-rw-r-- 1 reaper reaper  622 Oct  1 17:06 hw04f3.cpp
+-rw-rw-r-- 1 reaper reaper  540 Oct  1 17:06 hw04f4.cpp
+-rw-rw-r-- 1 reaper reaper  560 Oct  1 16:40 hw04f5.cpp
+-rw-rw-r-- 1 reaper reaper  633 Oct  1 16:40 hw04f6.cpp
+-rw-rw-r-- 1 reaper reaper  692 Oct  1 16:44 hw04f7.cpp
+-rw-rw-r-- 1 reaper reaper  191 Oct  1 16:56 hw04f8.cpp
+-rw-rw-r-- 1 reaper reaper  524 Oct  1 16:53 hw04f9.cpp
+-rw-rw-r-- 1 reaper reaper  508 Oct  1 17:05 hw04f.h
+-rw-rw-r-- 1 reaper reaper  570 Oct  1 16:53 hw04.h
+-rw-rw-r-- 1 reaper reaper    0 Oct  1 17:10 hw04.scr
+-rw-rw-r-- 1 reaper reaper 1118 Oct  1 17:10 Makefile
+]0;reaper@REAPER: ~/CS1B/04[01;32mreaper@REAPER[00m:[01;34m~/CS1B/04[00m$ make all
+g++ -c hw04f1.cpp -o hw04f1.o
+g++ -c hw04f2.cpp -o hw04f2.o
+g++ -c hw04f3.cpp -o hw04f3.o
+g++ -c hw04f4.cpp -o hw04f4.o
+g++ -c hw04f5.cpp -o hw04f5.o
+g++ -c hw04f6.cpp -o hw04f6.o
+g++ -c hw04f7.cpp -o hw04f7.o
+g++ -c hw04f8.cpp -o hw04f8.o
+g++ -c hw04f9.cpp -o hw04f9.o
+g++ hw04.cpp -o hw04 hw04f1.o hw04f2.o hw04f3.o hw04f4.o hw04f5.o hw04f6.o hw04f7.o hw04f8.o hw04f9.o
+]0;reaper@REAPER: ~/CS1B/04[01;32mreaper@REAPER[00m:[01;34m~/CS1B/04[00m$ ls -la
+total 120
+drwxrwxr-x 2 reaper reaper  4096 Oct  1 17:10 [0m[01;34m.[0m
+drwxrwxr-x 7 reaper reaper  4096 Oct  1 14:43 [01;34m..[0m
+-rwxrwxr-x 1 reaper reaper 23832 Oct  1 17:10 [01;32mhw04[0m
+-rw-rw-r-- 1 reaper reaper  1754 Oct  1 17:07 hw04.cpp
+-rw-rw-r-- 1 reaper reaper   731 Oct  1 17:06 hw04f1.cpp
+-rw-rw-r-- 1 reaper reaper  3544 Oct  1 17:10 hw04f1.o
+-rw-rw-r-- 1 reaper reaper   726 Oct  1 17:06 hw04f2.cpp
+-rw-rw-r-- 1 reaper reaper  3544 Oct  1 17:10 hw04f2.o
+-rw-rw-r-- 1 reaper reaper   622 Oct  1 17:06 hw04f3.cpp
+-rw-rw-r-- 1 reaper reaper  3352 Oct  1 17:10 hw04f3.o
+-rw-rw-r-- 1 reaper reaper   540 Oct  1 17:06 hw04f4.cpp
+-rw-rw-r-- 1 reaper reaper  3504 Oct  1 17:10 hw04f4.o
+-rw-rw-r-- 1 reaper reaper   560 Oct  1 16:40 hw04f5.cpp
+-rw-rw-r-- 1 reaper reaper  3504 Oct  1 17:10 hw04f5.o
+-rw-rw-r-- 1 reaper reaper   633 Oct  1 16:40 hw04f6.cpp
+-rw-rw-r-- 1 reaper reaper  3576 Oct  1 17:10 hw04f6.o
+-rw-rw-r-- 1 reaper reaper   692 Oct  1 16:44 hw04f7.cpp
+-rw-rw-r-- 1 reaper reaper  3656 Oct  1 17:10 hw04f7.o
+-rw-rw-r-- 1 reaper reaper   191 Oct  1 16:56 hw04f8.cpp
+-rw-rw-r-- 1 reaper reaper  2848 Oct  1 17:10 hw04f8.o
+-rw-rw-r-- 1 reaper reaper   524 Oct  1 16:53 hw04f9.cpp
+-rw-rw-r-- 1 reaper reaper  3232 Oct  1 17:10 hw04f9.o
+-rw-rw-r-- 1 reaper reaper   508 Oct  1 17:05 hw04f.h
+-rw-rw-r-- 1 reaper reaper   570 Oct  1 16:53 hw04.h
+-rw-rw-r-- 1 reaper reaper     0 Oct  1 17:10 hw04.scr
+-rw-rw-r-- 1 reaper reaper  1118 Oct  1 17:10 Makefile
+]0;reaper@REAPER: ~/CS1B/04[01;32mreaper@REAPER[00m:[01;34m~/CS1B/04[00m$ clear
+[H[2J[3J]0;reaper@REAPER: ~/CS1B/04[01;32mreaper@REAPER[00m:[01;34m~/CS1B/04[00m$ .hw[K[K/hw04 
+----------------------------------------------------
+|                                                  |
+|               Tax Income Calculator              |
+|                                                  |
+----------------------------------------------------
+
+Tax payer's fullname: Zachary Meyer
+Tax year: 2020
+
+How many sources of income are you entering: 1
+Income description: Syntiant, in  inc.    Corp.
+Income amount: 70000
+
+How many expenses do you have: 1
+Expense description: Rent
+Expense cost: 24000
+
+How many dependencies do you have: 1
+Dependency Name: Jon Mayor
+What is your relationship to Jon Mayor? Son
+
+
+2020 annual report for Zachary Meyer
+
+-- Yearly Income --
+Income [1]: Syntiant, Corp., $70000
+
+
+-- Yearly Expenses --
+Expense [1]: Rent, $24000
+
+
+-- Dependencies --
+Dependency [1]: Jon Mayor, Son
+
+
+-- Yearly Summary --
+Total income: $70000
+Total expenses: $24000
+Dependencies: 1
+Total taxes due: $7740
+]0;reaper@REAPER: ~/CS1B/04[01;32mreaper@REAPER[00m:[01;34m~/CS1B/04[00m$ exit
+exit
+
+Script done on 2020-10-01 17:11:32-07:00 [COMMAND_EXIT_CODE="0"]
