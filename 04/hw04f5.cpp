@@ -1,6 +1,6 @@
 #include "hw04f.h"
 
-void prExp(double expItem[], char expDesc[][40], int esiz)
+void prExp(double expItem[], char expDesc[][LEN], int esiz)
 {
   /*
    * Prints out a summary of a users yearly expenses

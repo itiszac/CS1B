@@ -1,6 +1,6 @@
 #include "hw04f.h"
 
-void prDep(char depNam[][40], char depRel[][40], int dsiz)
+void prDep(char depNam[][LEN], char depRel[][LEN], int dsiz)
 {
   /*
    * Prints out a summary of the users dependencies
