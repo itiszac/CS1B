@@ -36,6 +36,7 @@ int main()
       break;
     }
     case 3:
+    {
       if (entries < 10)
       {
         intputInfo(player, entries);
@@ -47,13 +48,13 @@ int main()
         std::cout << "\n\nSorry you already have 10 players in the database...\n\n";
       }
       break;
+    }
     case 4:
     {
       std::string szTmp = "";
       std::cout << "\n\nEnter player you're updating: ";
       std::getline(std::cin, szTmp);
       updateList(player, szTmp);
-      std::cout << "\nUpdating player..\n\n";
       break;
     }
     }

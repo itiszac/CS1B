@@ -1,0 +1,348 @@
+Script started on 2020-10-13 18:30:46-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;reaper@REAPER: ~/CS1B/05[01;32mreaper@REAPER[00m:[01;34m~/CS1B/05[00m$ make all
+g++ -c hw05f1.cpp -o hw05f1.o
+g++ -c hw05f2.cpp -o hw05f2.o
+g++ -c hw05f3.cpp -o hw05f3.o
+g++ -c hw05f4.cpp -o hw05f4.o
+g++ -c hw05f5.cpp -o hw05f5.o
+g++ -c hw05f6.cpp -o hw05f6.o
+g++ -c hw05f7.cpp -o hw05f7.o
+g++ hw05.cpp -o hw05 hw05f1.o hw05f2.o hw05f3.o hw05f4.o hw05f5.o hw05f6.o hw05f7.o
+]0;reaper@REAPER: ~/CS1B/05[01;32mreaper@REAPER[00m:[01;34m~/CS1B/05[00m$ ls -la
+total 164
+drwxrwxr-x 3 reaper reaper  4096 Oct 13 18:30 [0m[01;34m.[0m
+drwxrwxr-x 8 reaper reaper  4096 Oct 13 17:05 [01;34m..[0m
+-rwxrwxr-x 1 reaper reaper 40704 Oct 13 18:30 [01;32mhw05[0m
+-rw-rw-r-- 1 reaper reaper  1424 Oct 13 18:30 hw05.cpp
+-rw-rw-r-- 1 reaper reaper   398 Oct 13 17:47 hw05db.txt
+-rw-rw-r-- 1 reaper reaper  1672 Oct 13 18:12 hw05f1.cpp
+-rw-rw-r-- 1 reaper reaper  6824 Oct 13 18:30 hw05f1.o
+-rw-rw-r-- 1 reaper reaper  1361 Oct 13 18:15 hw05f2.cpp
+-rw-rw-r-- 1 reaper reaper 12704 Oct 13 18:30 hw05f2.o
+-rw-rw-r-- 1 reaper reaper   892 Oct 13 18:16 hw05f3.cpp
+-rw-rw-r-- 1 reaper reaper  5912 Oct 13 18:30 hw05f3.o
+-rw-rw-r-- 1 reaper reaper   870 Oct 13 18:16 hw05f4.cpp
+-rw-rw-r-- 1 reaper reaper  6392 Oct 13 18:30 hw05f4.o
+-rw-rw-r-- 1 reaper reaper   977 Oct 13 18:18 hw05f5.cpp
+-rw-rw-r-- 1 reaper reaper  7864 Oct 13 18:30 hw05f5.o
+-rw-rw-r-- 1 reaper reaper   443 Oct 13 18:29 hw05f6.cpp
+-rw-rw-r-- 1 reaper reaper  4920 Oct 13 18:30 hw05f6.o
+-rw-rw-r-- 1 reaper reaper   746 Oct 13 18:20 hw05f7.cpp
+-rw-rw-r-- 1 reaper reaper  6768 Oct 13 18:30 hw05f7.o
+-rw-rw-r-- 1 reaper reaper   701 Oct 13 17:13 hw05f.h
+-rw-rw-r-- 1 reaper reaper   644 Oct 13 18:03 hw05.h
+-rw-rw-r-- 1 reaper reaper     0 Oct 13 18:30 hw05.scr
+-rw-rw-r-- 1 reaper reaper   822 Oct 13 17:48 Makefile
+drwxrwxr-x 2 reaper reaper  4096 Oct 13 17:11 [01;34m.vscode[0m
+]0;reaper@REAPER: ~/CS1B/05[01;32mreaper@REAPER[00m:[01;34m~/CS1B/05[00m$ ./hw05
+------------------------------------------------------------------------------
+|                                                                            |
+|                       Welcome to the Football Database                     |
+|                                                                            |
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display Players
+2.) Search a Player
+3.) Add a Player
+4.) Update a Player
+
+Choose an option: 1
+
+
+Displaying Players...
+
+Player name: Maddie Love
+Player position: WR
+Player's score: 100
+Player's catches: 10
+Player's passing yards: 120
+Player's receiving yards: 35
+Player's rushing yards: 77
+
+Player name: John Mayor
+Player position: WR
+Player's score: 100
+Player's catches: 11
+Player's passing yards: 120
+Player's receiving yards: 35
+Player's rushing yards: 78
+
+Player name: Tom Brady
+Player position: QB
+Player's score: 100
+Player's catches: 10
+Player's passing yards: 120
+Player's receiving yards: 35
+Player's rushing yards: 77
+
+Player name: John Meyer
+Player position: RB
+Player's score: 123
+Player's catches: 321
+Player's passing yards: 32
+Player's receiving yards: 33
+Player's rushing yards: 44
+
+Player name: Zach Meyer
+Player position: QB
+Player's score: 900
+Player's catches: 234
+Player's passing yards: 432
+Player's receiving yards: 334
+Player's rushing yards: 555
+
+Player name: Roger Roge
+Player position: Safety
+Player's score: 234
+Player's catches: 56
+Player's passing yards: 34
+Player's receiving yards: 6
+Player's rushing yards: 44
+
+Player name: Pk master
+Player position: Safety
+Player's score: 234
+Player's catches: 534
+Player's passing yards: 22
+Player's receiving yards: 3
+Player's rushing yards: 3
+
+Player name: Judith Johnson
+Player position: Safety
+Player's score: 123
+Player's catches: 32
+Player's passing yards: 45
+Player's receiving yards: 43
+Player's rushing yards: 66
+
+Player name: Jakey Johnson
+Player position: Forward
+Player's score: 543
+Player's catches: 345
+Player's passing yards: 654
+Player's receiving yards: 234
+Player's rushing yards: 55
+
+Player name: Xakery Mayer
+Player position: WR
+Player's score: 124
+Player's catches: 321
+Player's passing yards: 234
+Player's receiving yards: 345
+Player's rushing yards: 654
+
+Would you like to continue? (y/n): y
+
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display Players
+2.) Search a Player
+3.) Add a Player
+4.) Update a Player
+
+Choose an option: 2
+
+
+Enter player you're searching for: Zach Meyer
+
+Searching for the player Zach Meyer
+Found the player Zach Meyer would you like to display stats? (y/n): y
+
+Player name: Zach Meyer
+Player position: QB
+Player's score: 900
+Player's catches: 234
+Player's passing yards: 432
+Player's receiving yards: 334
+Player's rushing yards: 555
+
+Would you like to continue? (y/n): y
+
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display Players
+2.) Search a Player
+3.) Add a Player
+4.) Update a Player
+
+Choose an option: 3
+
+
+Sorry you already have 10 players in the database...
+
+Would you like to continue? (y/n): y
+
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display Players
+2.) Search a Player
+3.) Add a Player
+4.) Update a Player
+
+Choose an option: 4
+
+
+Enter player you're updating: Xakery Meyer
+Invalid search, player was not found..
+
+Would you like to continue? (y/n): y
+
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display Players
+2.) Search a Player
+3.) Add a Player
+4.) Update a Player
+
+Choose an option: 4
+
+
+Enter player you're updating: Xakeyer Mayer
+Invalid search, player was not found..
+
+Would you like to continue? (y/n): y
+
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display Players
+2.) Search a Player
+3.) Add a Player
+4.) Update a Player
+
+Choose an option: 4
+
+
+Enter player you're updating: Xakeyer   ry Mayer
+Found the player Xakery Mayer would you like to display stats? (y/n): y
+
+Player name: Xakery Mayer
+Player position: WR
+Player's score: 124
+Player's catches: 321
+Player's passing yards: 234
+Player's receiving yards: 345
+Player's rushing yards: 654
+
+Enter player name: Xakery Mayer
+Enter player position: QB
+Enter player's score: 123 6
+Enter player's catches: 123
+Enter player's passing yards: 423
+Enter player's receiving yards: 543
+Enter player's rushing yards: 54
+Updated player...
+
+Would you like to continue? (y/n): y
+
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display Players
+2.) Search a Player
+3.) Add a Player
+4.) Update a Player
+
+Choose an option: 1
+
+
+Displaying Players...
+
+Player name: Maddie Love
+Player position: WR
+Player's score: 100
+Player's catches: 10
+Player's passing yards: 120
+Player's receiving yards: 35
+Player's rushing yards: 77
+
+Player name: John Mayor
+Player position: WR
+Player's score: 100
+Player's catches: 11
+Player's passing yards: 120
+Player's receiving yards: 35
+Player's rushing yards: 78
+
+Player name: Tom Brady
+Player position: QB
+Player's score: 100
+Player's catches: 10
+Player's passing yards: 120
+Player's receiving yards: 35
+Player's rushing yards: 77
+
+Player name: John Meyer
+Player position: RB
+Player's score: 123
+Player's catches: 321
+Player's passing yards: 32
+Player's receiving yards: 33
+Player's rushing yards: 44
+
+Player name: Zach Meyer
+Player position: QB
+Player's score: 900
+Player's catches: 234
+Player's passing yards: 432
+Player's receiving yards: 334
+Player's rushing yards: 555
+
+Player name: Roger Roge
+Player position: Safety
+Player's score: 234
+Player's catches: 56
+Player's passing yards: 34
+Player's receiving yards: 6
+Player's rushing yards: 44
+
+Player name: Pk master
+Player position: Safety
+Player's score: 234
+Player's catches: 534
+Player's passing yards: 22
+Player's receiving yards: 3
+Player's rushing yards: 3
+
+Player name: Judith Johnson
+Player position: Safety
+Player's score: 123
+Player's catches: 32
+Player's passing yards: 45
+Player's receiving yards: 43
+Player's rushing yards: 66
+
+Player name: Jakey Johnson
+Player position: Forward
+Player's score: 543
+Player's catches: 345
+Player's passing yards: 654
+Player's receiving yards: 234
+Player's rushing yards: 55
+
+Player name: Xakery Mayer
+Player position: QB
+Player's score: 126
+Player's catches: 123
+Player's passing yards: 423
+Player's receiving yards: 543
+Player's rushing yards: 54
+
+Would you like to continue? (y/n): n
+]0;reaper@REAPER: ~/CS1B/05[01;32mreaper@REAPER[00m:[01;34m~/CS1B/05[00m$ exit
+exit
+
+Script done on 2020-10-13 18:32:02-07:00 [COMMAND_EXIT_CODE="0"]

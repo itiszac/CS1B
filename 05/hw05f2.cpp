@@ -18,7 +18,7 @@ void popList(Player player[], std::string szFileName, int &entries)
   int i = 0;
   if (szFileName.length() == 0)
     return;
-  std::fstream fs(szFileName);
+  std::fstream fs(szFileName, std::fstream::in);
   if (!fs.is_open())
     return;
   while (!fs.eof() && i < 10)

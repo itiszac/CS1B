@@ -13,7 +13,7 @@ void saveList(Player player[], std::string szFileName)
    */
   if (szFileName.length() == 0)
     return;
-  std::fstream fs(szFileName);
+  std::fstream fs(szFileName, std::fstream::out | std::fstream::trunc);
   if (!fs.is_open())
     return;
   for (int i = 0; i < LEN; i++)

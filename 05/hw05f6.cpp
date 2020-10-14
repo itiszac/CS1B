@@ -16,5 +16,6 @@ void updateList(Player player[], std::string szName)
   if (nIndex > -1)
   {
     intputInfo(player, nIndex);
+    std::cout << "Updated player...\n\n";
   }
 }
