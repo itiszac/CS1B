@@ -1,0 +1,162 @@
+Script started on 2020-10-22 19:37:28-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;reaper@REAPER: ~/CS1B/06/s14[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s14[00m$ ls -la
+total 116
+drwxrwxr-x  2 reaper reaper  4096 Oct 22 19:37 [0m[01;34m.[0m
+drwxrwxr-x 11 reaper reaper  4096 Oct 20 20:59 [01;34m..[0m
+-rw-rw-r--  1 reaper reaper    39 Oct 21 23:23 hw06.h
+-rw-rw-r--  1 reaper reaper   224 Oct 22 19:35 Makefile
+-rw-rw-r--  1 reaper reaper   156 Oct 22 19:36 s14.cpp
+-rwxrwxr-x  1 reaper reaper 52984 Oct 22 19:36 [01;32ms14dbg[0m
+-rw-rw-r--  1 reaper reaper   129 Oct 21 23:26 s14f.cpp
+-rw-rw-r--  1 reaper reaper 39224 Oct 22 19:35 s14f.o
+-rw-rw-r--  1 reaper reaper     0 Oct 22 19:37 s14.scr
+]0;reaper@REAPER: ~/CS1B/06/s14[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s14[00m$ make all
+g++ -g s14.cpp s14f.o -o s14dbg
+]0;reaper@REAPER: ~/CS1B/06/s14[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s14[00m$ gdb 14[K[Ks14dbg 
+[35;1m[35;1mGNU gdb [m[35;1m(Ubuntu 9.1-0ubuntu1) [m[35;1m9.1[m[35;1m
+[m[mCopyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32ms14dbg[m...
+(gdb) list 1,11
+1	#include "hw06.h"
+2	
+3	int main()
+4	{
+5	  int d[5] = {1, 2, 3, 4, 5};
+6	  int s;
+7	  // i n i t i a l i z e d [ ]
+8	  s = Sum(d);
+9	  std::cout << "s: " << s;
+10	  return 0;
+11	}
+(gdb) b 4
+Breakpoint 1 at [34m0x11c9[m: file [32ms14.cpp[m, line 4.
+(gdb) run
+Starting program: /home/reaper/CS1B/06/s14/s14dbg 
+
+Breakpoint 1, [33mmain[m () at [32ms14.cpp[m:4
+4	{
+(gdb) s
+5	  int d[5] = {1, 2, 3, 4, 5};
+(gdb) p d
+$1 = {0, 0, 1431654624, 21845, -8224}
+(gdb) p &[K&d
+$2 = (int (*)[5]) [34m0x7fffffffded0[m
+(gdb) s
+8	  s = Sum(d);
+(gdb) p d
+$3 = {1, 2, 3, 4, 5}
+(gdb) p s
+$4 = 21845
+(gdb) p &s
+$5 = (int *) [34m0x7fffffffdecc[m
+(gdb) s
+[33mSum[m ([36mA[m=0x10000ffff) at [32ms14f.cpp[m:4
+4	{
+(gdb) list 
+1	#include "hw06.h"
+2	
+3	int Sum(int A[5])
+4	{
+5	  int i;
+6	  int sum = 0;
+7	  for (i = 0; i < 5; ++i)
+8	  {
+9	    sum += A[i];
+10	  }
+(gdb) b 4
+Breakpoint 2 at [34m0x5555555552ba[m: file [32ms14f.cpp[m, line 4.
+(gdb) p i
+$6 = 1431655266
+(gdb) s
+6	  int sum = 0;
+(gdb) pi[K i
+$7 = 1431655266
+(gdb) p &i
+$8 = (int *) [34m0x7fffffffdea8[m
+(gdb) p &sum
+$9 = (int *) [34m0x7fffffffdeac[m
+(gdb) p sum
+$10 = 21845
+(gdb) s
+7	  for (i = 0; i < 5; ++i)
+(gdb) p sum
+$11 = 0
+(gdb) s
+9	    sum += A[i];
+(gdb) s
+7	  for (i = 0; i < 5; ++i)
+(gdb) p sum
+$12 = 1
+(gdb) s
+9	    sum += A[i];
+(gdb) s
+7	  for (i = 0; i < 5; ++i)
+(gdb) p s[Ksum
+$13 = 3
+(gdb) s
+9	    sum += A[i];
+(gdb) s
+7	  for (i = 0; i < 5; ++i)
+(gdb) n[Ks
+9	    sum += A[i];
+(gdb) p s
+No symbol "s" in current context.
+(gdb) ps [K[K sum
+$14 = 6
+(gdb) s
+7	  for (i = 0; i < 5; ++i)
+(gdb) s
+9	    sum += A[i];
+(gdb) s
+7	  for (i = 0; i < 5; ++i)
+(gdb) p sum
+$15 = 15
+(gdb) s
+11	  return sum;
+(gdb) p &sum
+$16 = (int *) [34m0x7fffffffdeac[m
+(gdb) s
+12	}
+(gdb) s
+[33mmain[m () at [32ms14.cpp[m:9
+9	  std::cout << "s: " << s;
+(gdb) p s
+$17 = 15
+(gdb) s
+10	  return 0;
+(gdb) s
+11	}
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 28357] will be killed.
+
+Quit anyway? (y or n) y
+]0;reaper@REAPER: ~/CS1B/06/s14[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s14[00m$ quit
+
+Command 'quit' not found, did you mean:
+
+  command 'qgit' from deb qgit (2.9-1build1)
+  command 'luit' from deb x11-utils (7.7+5)
+  command 'quiz' from deb bsdgames (2.17-28build1)
+  command 'quilt' from deb quilt (0.65-3)
+
+Try: sudo apt install <deb name>
+
+]0;reaper@REAPER: ~/CS1B/06/s14[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s14[00m$ exit
+exit
+
+Script done on 2020-10-22 19:40:04-07:00 [COMMAND_EXIT_CODE="127"]

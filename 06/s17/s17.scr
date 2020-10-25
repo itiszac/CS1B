@@ -1,0 +1,317 @@
+Script started on 2020-10-22 20:05:15-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;reaper@REAPER: ~/CS1B/06/s17[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s17[00m$ li[Ks -la
+total 68
+drwxrwxr-x  2 reaper reaper  4096 Oct 22 20:05 [0m[01;34m.[0m
+drwxrwxr-x 11 reaper reaper  4096 Oct 20 20:59 [01;34m..[0m
+-rw-rw-r--  1 reaper reaper    41 Oct 20 20:50 hw06.h
+-rw-rw-r--  1 reaper reaper   216 Oct 22 20:04 Makefile
+-rw-rw-r--  1 reaper reaper   244 Oct 22 20:03 s17.cpp
+-rwxrwxr-x  1 reaper reaper 39536 Oct 22 20:05 [01;32ms17dbg[0m
+-rw-rw-r--  1 reaper reaper   154 Oct 20 20:50 s17f.cpp
+-rw-rw-r--  1 reaper reaper  3144 Oct 22 20:05 s17f.o
+-rw-rw-r--  1 reaper reaper     0 Oct 22 20:05 s17.scr
+]0;reaper@REAPER: ~/CS1B/06/s17[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s17[00m$ m[Kmake all
+g++ -g s17.cpp s17f.o -o s17dbg
+]0;reaper@REAPER: ~/CS1B/06/s17[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s17[00m$ gdb s17dbg 
+[35;1m[35;1mGNU gdb [m[35;1m(Ubuntu 9.2-0ubuntu1~20.04) [m[35;1m9.2[m[35;1m
+[m[mCopyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32ms17dbg[m...
+(gdb) list 1,18
+1	#include "hw06.h"
+2	
+3	int main()
+4	{
+5	  int d[5][8];
+6	  int s;
+7	  // i n i t i a l i z e ∗d
+8	  for (int i = 0; i < 5; i++)
+9	  {
+10	    for (int j = 0; j < 8; j++)
+11	      d[i][j] = j;
+12	  }
+13	  s = Sum(d);
+14	
+15	  std::cout << "s: " << s << std::endl;
+16	
+17	  return 0;
+18	}
+(gdb) b 4
+Breakpoint 1 at [34m0x11e9[m: file [32ms17.cpp[m, line 4.
+(gdb) s
+The program is not being run.
+(gdb) run
+Starting program: /home/reaper/CS1B/06/s17/s17dbg 
+
+Breakpoint 1, [33mmain[m () at [32ms17.cpp[m:4
+4	{
+(gdb) s
+8	  for (int i = 0; i < 5; i++)
+(gdb) p d
+$1 = {{-134549504, 32767, -135738992, 32767, -136511544, 32767, -138244185, [m
+    [m32767}, {1431667025, 21845, 1431666696, 21845, -8216, 32767, 1, 0}, {[m
+    [m-8544, 32767, 1431655193, 21845, 640, 0, 65535, 1}, {-8528, 32767, [m
+    [m1431655219, 21845, 2, 0, 1431655405, 21845}, {-136511544, 32767, [m
+    [m1431655328, 21845, 0, 0, 1431654656, 21845}}
+(gdb) p &d
+$2 = (int (*)[5][8]) [34m0x7fffffffde40[m
+(gdb) p s
+$3 = 32767
+(gdb) s
+10	    for (int j = 0; j < 8; j++)
+(gdb) s
+11	      d[i][j] = j;
+(gdb) s
+10	    for (int j = 0; j < 8; j++)
+(gdb) p [K[Kd[Kp d[0]0[[K[K[0]
+$4 = 0
+(gdb) s
+11	      d[i][j] = j;
+(gdb) s
+10	    for (int j = 0; j < 8; j++)
+(gdb) s
+11	      d[i][j] = j;
+(gdb) p d[0]0[K[1]
+$5 = 1
+(gdb) s
+10	    for (int j = 0; j < 8; j++)
+(gdb) s
+11	      d[i][j] = j;
+(gdb) s
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+8	  for (int i = 0; i < 5; i++)
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) p [K d[1][2]
+$6 = 2
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+8	  for (int i = 0; i < 5; i++)
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+8	  for (int i = 0; i < 5; i++)
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) n
+11	      d[i][j] = j;
+(gdb) n
+10	    for (int j = 0; j < 8; j++)
+(gdb) continue
+Continuing.
+s: 140
+[Inferior 1 (process 50883) exited normally]
+(gdb) run
+Starting program: /home/reaper/CS1B/06/s17/s17dbg 
+
+Breakpoint 1, [33mmain[m () at [32ms17.cpp[m:4
+4	{
+(gdb) b 14
+Breakpoint 2 at [34m0x555555555279[m: file [32ms17.cpp[m, line 15.
+(gdb) b 13
+Breakpoint 3 at [34m0x555555555264[m: file [32ms17.cpp[m, line 13.
+(gdb) run
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /home/reaper/CS1B/06/s17/s17dbg 
+
+Breakpoint 1, [33mmain[m () at [32ms17.cpp[m:4
+4	{
+(gdb) continue
+Continuing.
+
+Breakpoint 3, [33mmain[m () at [32ms17.cpp[m:13
+13	  s = Sum(d);
+(gdb) s
+[33mSum[m ([m
+    [m[36mA[m=0x7ffff7ee6b6a <std::basic_ios<wchar_t, std::char_traits<wchar_t> >::_M_cache_locale(std::locale const&)+90>) at [32ms17f.cpp[m:2
+2	{
+(gdb) list
+1	int Sum(int A[][8])
+2	{
+3	  int i, j, sum = 0;
+4	  for (i = 0; i < 5; ++i)
+5	  {
+6	    for (j = 0; j < 8; ++j)
+7	    {
+8	      sum += A[i][j];
+9	    }
+10	  }
+(gdb) p i
+$7 = 32767
+(gdb) p j
+$8 = -134550072
+(gdb) p sum
+$9 = 32767
+(gdb) s
+3	  int i, j, sum = 0;
+(gdb) s
+4	  for (i = 0; i < 5; ++i)
+(gdb) p sum
+$10 = 0
+(gdb) s
+6	    for (j = 0; j < 8; ++j)
+(gdb) s
+8	      sum += A[i][j];
+(gdb) p i
+$11 = 0
+(gdb) p j
+$12 = 0
+(gdb) p &i
+$13 = (int *) [34m0x7fffffffde14[m
+(gdb) p &j
+$14 = (int *) [34m0x7fffffffde18[m
+(gdb) p &[K&sum
+$15 = (int *) [34m0x7fffffffde1c[m
+(gdb) s
+6	    for (j = 0; j < 8; ++j)
+(gdb) s
+8	      sum += A[i][j];
+(gdb) p sum
+$16 = 0
+(gdb) s
+6	    for (j = 0; j < 8; ++j)
+(gdb) p sum
+$17 = 1
+(gdb) p &sum
+$18 = (int *) [34m0x7fffffffde1c[m
+(gdb) s
+8	      sum += A[i][j];
+(gdb) s
+6	    for (j = 0; j < 8; ++j)
+(gdb) s
+8	      sum += A[i][j];
+(gdb) s
+6	    for (j = 0; j < 8; ++j)
+(gdb) p sum
+$19 = 6
+(gdb) s
+8	      sum += A[i][j];
+(gdb) s
+6	    for (j = 0; j < 8; ++j)
+(gdb) s
+8	      sum += A[i][j];
+(gdb) s
+6	    for (j = 0; j < 8; ++j)
+(gdb) s
+8	      sum += A[i][j];
+(gdb) s
+6	    for (j = 0; j < 8; ++j)
+(gdb) s
+8	      sum += A[i][j];
+(gdb) s
+6	    for (j = 0; j < 8; ++j)
+(gdb) p sum
+$20 = 28
+(gdb) continue
+Continuing.
+
+Breakpoint 2, [33mmain[m () at [32ms17.cpp[m:15
+15	  std::cout << "s: " << s << std::endl;
+(gdb) p s
+$21 = 140
+(gdb) s
+s: 140
+17	  return 0;
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 51761] will be killed.
+
+Quit anyway? (y or n) e[Kye[K
+]0;reaper@REAPER: ~/CS1B/06/s17[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s17[00m$ yes[K[K[Kquit[K[K[K[Kexit
+exit
+
+Script done on 2020-10-22 20:08:30-07:00 [COMMAND_EXIT_CODE="0"]

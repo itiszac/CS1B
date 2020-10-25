@@ -1,0 +1,193 @@
+Script started on 2020-10-22 20:30:04-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;reaper@REAPER: ~/CS1B/06/s22[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s22[00m$ make all
+g++ -g s22.cpp s22f.o -o s22dbg
+]0;reaper@REAPER: ~/CS1B/06/s22[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s22[00m$ ls -la
+total 120
+drwxrwxr-x  2 reaper reaper  4096 Oct 22 20:30 [0m[01;34m.[0m
+drwxrwxr-x 11 reaper reaper  4096 Oct 20 20:59 [01;34m..[0m
+-rw-rw-r--  1 reaper reaper    51 Oct 20 21:00 hw06.h
+-rw-rw-r--  1 reaper reaper   216 Oct 22 20:27 Makefile
+-rw-rw-r--  1 reaper reaper   240 Oct 22 20:29 s22.cpp
+-rwxrwxr-x  1 reaper reaper 53328 Oct 22 20:30 [01;32ms22dbg[0m
+-rw-rw-r--  1 reaper reaper   192 Oct 20 21:00 s22f.cpp
+-rw-rw-r--  1 reaper reaper 39336 Oct 22 20:29 s22f.o
+-rw-rw-r--  1 reaper reaper     0 Oct 22 20:30 s22.scr
+]0;reaper@REAPER: ~/CS1B/06/s22[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s22[00m$ clean[Kr
+[H[2J[3J]0;reaper@REAPER: ~/CS1B/06/s22[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s22[00m$ gdb s22dbg 
+[35;1m[35;1mGNU gdb [m[35;1m(Ubuntu 9.2-0ubuntu1~20.04) [m[35;1m9.2[m[35;1m
+[m[mCopyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32ms22dbg[m...
+(gdb) list 1,18
+1	#include "hw06.h"
+2	
+3	int main()
+4	{
+5	  int *d, s;
+6	  d = new int[5 * 8];
+7	  if (!d)
+8	    return -1;
+9	
+10	  for (int i = 0; i < 5 * 8; i++)
+11	    d[i] = i;
+12	
+13	  s = Sum(d, 5, 8);
+14	  std::cout << "s: " << s << std::endl;
+15	
+16	  delete[] d; // ye s !
+17	  return 0;
+18	}
+(gdb) b 4
+Breakpoint 1 at [34m0x1209[m: file [32ms22.cpp[m, line 4.
+(gdb) b 1[K13
+Breakpoint 2 at [34m0x1260[m: file [32ms22.cpp[m, line 13.
+(gdb) b 14
+Breakpoint 3 at [34m0x1279[m: file [32ms22.cpp[m, line 14.
+(gdb) s
+The program is not being run.
+(gdb) run
+Starting program: /home/reaper/CS1B/06/s22/s22dbg 
+
+Breakpoint 1, [33mmain[m () at [32ms22.cpp[m:4
+4	{
+(gdb) s
+6	  d = new int[5 * 8];
+(gdb) s
+7	  if (!d)
+(gdb) s
+10	  for (int i = 0; i < 5 * 8; i++)
+(gdb) p *[K&d
+$1 = (int **) [34m0x7fffffffdee8[m
+(gdb) p d
+$2 = (int *) [34m0x55555556aeb0[m
+(gdb) p s
+$3 = 32767
+(gdb) p &s
+$4 = (int *) [34m0x7fffffffdee4[m
+(gdb) s
+11	    d[i] = i;
+(gdb) s
+10	  for (int i = 0; i < 5 * 8; i++)
+(gdb) s
+11	    d[i] = i;
+(gdb) p d[0]
+$5 = 0
+(gdb) p [[K[K[Ks
+10	  for (int i = 0; i < 5 * 8; i++)
+(gdb) d[Kp d[1]
+$6 = 1
+(gdb) continue
+Continuing.
+
+Breakpoint 2, [33mmain[m () at [32ms22.cpp[m:13
+13	  s = Sum(d, 5, 8);
+(gdb) p s
+$7 = 32767
+(gdb) p &s
+$8 = (int *) [34m0x7fffffffdee4[m
+(gdb) p d
+$9 = (int *) [34m0x55555556aeb0[m
+(gdb) p [K[Ks
+[33mSum[m ([36mp[m=0x7fffffffdef0, [36mr[m=0, [36mc[m=160) at [32ms22f.cpp[m:4
+4	{
+(gdb) list
+1	#include "hw06.h"
+2	
+3	int Sum(int *p, int r, int c)
+4	{
+5	  int j, k, sum = 0;
+6	  for (j = 0; j < r; ++j)
+7	  {
+8	    for (k = 0; k < c; ++k)
+9	    {
+10	      sum += *(p + j * c + k);
+(gdb) p p
+$10 = (int *) [34m0x7fffffffdef0[m
+(gdb) p &[K&p
+$11 = (int **) [34m0x7fffffffdeb8[m
+(gdb) p r
+$12 = 0
+(gdb) p &r
+$13 = (int *) [34m0x7fffffffdeb4[m
+(gdb) p c
+$14 = 160
+(gdb) p &c
+$15 = (int *) [34m0x7fffffffdeb0[m
+(gdb) d
+Delete all breakpoints? (y or n) p i[Kj
+Please answer y or n.
+Delete all breakpoints? (y or n) n
+(gdb) s
+5	  int j, k, sum = 0;
+(gdb) p j
+$16 = 21845
+(gdb) p k
+$17 = -135807959
+(gdb) p sum
+$18 = 32767
+(gdb) s
+6	  for (j = 0; j < r; ++j)
+(gdb) p sum
+$19 = 0
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) p j
+$20 = 0
+(gdb) p k
+$21 = -135807959
+(gdb) s
+10	      sum += *(p + j * c + k);
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb)  [Kp sum
+$22 = 0
+(gdb) s
+10	      sum += *(p + j * c + k);
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) p sum
+$23 = 1
+(gdb) s
+10	      sum += *(p + j * c + k);
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) p sum
+$24 = 3
+(gdb) s
+10	      sum += *(p + j * c + k);
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) p sum
+$25 = 6
+(gdb) continue
+Continuing.
+
+Breakpoint 3, [33mmain[m () at [32ms22.cpp[m:14
+14	  std::cout << "s: " << s << std::endl;
+(gdb) p s
+$26 = 780
+(gdb) s
+s: 780
+16	  delete[] d; // ye s !
+(gdb) ui[K[Kquit
+A debugging session is active.
+
+	Inferior 1 [process 66922] will be killed.
+
+Quit anyway? (y or n) y
+]0;reaper@REAPER: ~/CS1B/06/s22[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s22[00m$ exit
+exit
+
+Script done on 2020-10-22 20:32:29-07:00 [COMMAND_EXIT_CODE="0"]

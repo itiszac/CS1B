@@ -1,0 +1,269 @@
+Script started on 2020-10-22 20:19:03-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;reaper@REAPER: ~/CS1B/06/s19[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s19[00m$ make all
+g++ -g s19.cpp s19f.o -o s19dbg
+l]0;reaper@REAPER: ~/CS1B/06/s19[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s19[00m$ ls -la
+total 120
+drwxrwxr-x  2 reaper reaper  4096 Oct 22 20:19 [0m[01;34m.[0m
+drwxrwxr-x 11 reaper reaper  4096 Oct 20 20:59 [01;34m..[0m
+-rw-rw-r--  1 reaper reaper    52 Oct 20 20:49 hw06.h
+-rw-rw-r--  1 reaper reaper   216 Oct 22 20:18 Makefile
+-rw-rw-r--  1 reaper reaper   240 Oct 20 20:48 s19.cpp
+-rwxrwxr-x  1 reaper reaper 53360 Oct 22 20:19 [01;32ms19dbg[0m
+-rw-rw-r--  1 reaper reaper   184 Oct 20 20:48 s19f.cpp
+-rw-rw-r--  1 reaper reaper 39352 Oct 22 20:18 s19f.o
+-rw-rw-r--  1 reaper reaper     0 Oct 22 20:19 s19.scr
+]0;reaper@REAPER: ~/CS1B/06/s19[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s19[00m$ s[Kd[Kgdb s19dbg 
+[35;1m[35;1mGNU gdb [m[35;1m(Ubuntu 9.2-0ubuntu1~20.04) [m[35;1m9.2[m[35;1m
+[m[mCopyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32ms19dbg[m...
+(gdb) list 1,16
+1	#include "hw06.h"
+2	
+3	int main()
+4	{
+5	  int **d, s, i;
+6	  d = new int *[5];
+7	  for (i = 0; i < 5; ++i)
+8	    d[i] = new int[8];
+9	  s = Sum(d, 5, 8);
+10	
+11	  std::cout << "s: " << s << std::endl;
+12	
+13	  for (i = 0; i < 5; ++i)
+14	    delete[] d[i];
+15	  delete[] d;
+16	}
+(gdb) b 4
+Breakpoint 1 at [34m0x1209[m: file [32ms19.cpp[m, line 4.
+(gdb) b 9
+Breakpoint 2 at [34m0x1259[m: file [32ms19.cpp[m, line 9.
+(gdb) run
+Starting program: /home/reaper/CS1B/06/s19/s19dbg 
+
+Breakpoint 1, [33mmain[m () at [32ms19.cpp[m:4
+4	{
+(gdb) s
+6	  d = new int *[5];
+(gdb) s
+7	  for (i = 0; i < 5; ++i)
+(gdb) p d
+$1 = (int **) [34m0x55555556aeb0[m
+(gdb) p &d
+$2 = (int ***) [34m0x7fffffffded8[m
+(gdb) p s
+$3 = 0
+(gdb) p i
+$4 = 0
+(gdb) p &s
+$5 = (int *) [34m0x7fffffffded4[m
+(gdb) p &i
+$6 = (int *) [34m0x7fffffffded0[m
+(gdb) s
+8	    d[i] = new int[8];
+(gdb) s
+7	  for (i = 0; i < 5; ++i)
+(gdb) continue
+Continuing.
+
+Breakpoint 2, [33mmain[m () at [32ms19.cpp[m:9
+9	  s = Sum(d, 5, 8);
+(gdb) p s
+$7 = 0
+(gdb) s
+[33mSum[m ([36mp[m=0x7fffffffdef0, [36mr[m=0, [36mc[m=32) at [32ms19f.cpp[m:4
+4	{
+(gdb) list
+1	#include "hw06.h"
+2	
+3	int Sum(int **p, int r, int c)
+4	{
+5	  int j, k, sum = 0;
+6	  for (j = 0; j < r; ++j)
+7	  {
+8	    for (k = 0; k < c; ++k)
+9	    {
+10	      sum += p[j][k];
+(gdb) p p
+$8 = (int **) [34m0x7fffffffdef0[m
+(gdb) p &p
+$9 = (int ***) [34m0x7fffffffdea8[m
+(gdb) p r
+$10 = 0
+(gdb) p c
+$11 = 32
+(gdb) p &r
+$12 = (int *) [34m0x7fffffffdea4[m
+(gdb) p &c
+$13 = (int *) [34m0x7fffffffdea0[m
+(gdb) p j
+$14 = 21845
+(gdb) p k
+$15 = -135807959
+(gdb) p sum
+$16 = 32767
+(gdb) p &j
+$17 = (int *) [34m0x7fffffffdeb4[m
+(gdb) p &k
+$18 = (int *) [34m0x7fffffffdeb8[m
+(gdb) p &sum
+$19 = (int *) [34m0x7fffffffdebc[m
+(gdb) s
+5	  int j, k, sum = 0;
+(gdb) s
+6	  for (j = 0; j < r; ++j)
+(gdb) p sum
+$20 = 0
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) p sum
+$21 = 0
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) p sum
+$22 = 0
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) p sum
+$23 = 0
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) p sum
+$24 = 0
+(gdb) p j
+$25 = 0
+(gdb) p k
+$26 = 5
+(gdb) p r
+$27 = 5
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+6	  for (j = 0; j < r; ++j)
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) p sum
+$28 = 0
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+10	      sum += p[j][k];
+(gdb) s
+8	    for (k = 0; k < c; ++k)
+(gdb) s
+6	  for (j = 0; j < r; ++j)
+(gdb) continue[K[K[K[K[K[K[K[Kb 14[K3
+Breakpoint 3 at [34m0x5555555553e9[m: file [32ms19f.cpp[m, line 13.
+(gdb) continue
+Continuing.
+
+Breakpoint 3, [33mSum[m ([36mp[m=0x55555556aeb0, [36mr[m=5, [36mc[m=8) at [32ms19f.cpp[m:13
+13	  return sum;
+(gdb) p sum
+$29 = 0
+(gdb) s
+14	}
+(gdb) s
+[33mmain[m () at [32ms19.cpp[m:11
+11	  std::cout << "s: " << s << std::endl;
+(gdb) p s
+$30 = 0
+(gdb) s
+s: 0
+13	  for (i = 0; i < 5; ++i)
+(gdb) s
+14	    delete[] d[i];
+(gdb) s
+13	  for (i = 0; i < 5; ++i)
+(gdb) s
+14	    delete[] d[i];
+(gdb) s
+13	  for (i = 0; i < 5; ++i)
+(gdb) continue
+Continuing.
+[Inferior 1 (process 59551) exited normally]
+(gdb) quit
+]0;reaper@REAPER: ~/CS1B/06/s19[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s19[00m$ make tar
+tar cvf 19hw06.tar s19.cpp s19f.cpp hw06.h s19.scr
+s19.cpp
+s19f.cpp
+hw06.h
+s19.scr
+]0;reaper@REAPER: ~/CS1B/06/s19[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s19[00m$ ls -la
+total 136
+drwxrwxr-x  2 reaper reaper  4096 Oct 22 20:22 [0m[01;34m.[0m
+drwxrwxr-x 11 reaper reaper  4096 Oct 20 20:59 [01;34m..[0m
+-rw-rw-r--  1 reaper reaper 10240 Oct 22 20:22 [01;31m19hw06.tar[0m
+-rw-rw-r--  1 reaper reaper    52 Oct 20 20:49 hw06.h
+-rw-rw-r--  1 reaper reaper   216 Oct 22 20:18 Makefile
+-rw-rw-r--  1 reaper reaper   240 Oct 20 20:48 s19.cpp
+-rwxrwxr-x  1 reaper reaper 53360 Oct 22 20:19 [01;32ms19dbg[0m
+-rw-rw-r--  1 reaper reaper   184 Oct 20 20:48 s19f.cpp
+-rw-rw-r--  1 reaper reaper 39352 Oct 22 20:18 s19f.o
+-rw-rw-r--  1 reaper reaper  4096 Oct 22 20:20 s19.scr
+]0;reaper@REAPER: ~/CS1B/06/s19[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s19[00m$ scri[K[K[K[Kexit
+exit
+
+Script done on 2020-10-22 20:22:35-07:00 [COMMAND_EXIT_CODE="0"]

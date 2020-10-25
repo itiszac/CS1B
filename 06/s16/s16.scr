@@ -1,0 +1,197 @@
+Script started on 2020-10-22 19:58:25-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;reaper@REAPER: ~/CS1B/06/s16[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s16[00m$ gdb sc[K16dbg 
+[35;1m[35;1mGNU gdb [m[35;1m(Ubuntu 9.2-0ubuntu1~20.04) [m[35;1m9.2[m[35;1m
+[m[mCopyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32ms16dbg[m...
+(gdb) list 1,18
+1	#include "hw06.h"
+2	
+3	int main()
+4	{
+5	  int *d, s;
+6	  d = new int[5];
+7	  // i n i t i a l i z e ∗d
+8	  for (int i = 0; i < 5; i++)
+9	  {
+10	    d[i] = i;
+11	  }
+12	  s = Sum(d, 5);
+13	
+14	  std::cout << "s: " << s << std::endl;
+15	
+16	  delete[] d;
+17	  return 0;
+18	}
+(gdb) b 4
+Breakpoint 1 at [34m0x1209[m: file [32ms16.cpp[m, line 4.
+(gdb) s
+The program is not being run.
+(gdb) run
+Starting program: /home/reaper/CS1B/06/s16/s16dbg 
+
+Breakpoint 1, [33mmain[m () at [32ms16.cpp[m:4
+4	{
+(gdb) s
+6	  d = new int[5];
+(gdb) s
+8	  for (int i = 0; i < 5; i++)
+(gdb) p d
+$1 = (int *) [34m0x55555556aeb0[m
+(gdb) p &d
+$2 = (int **) [34m0x7fffffffdee8[m
+(gdb) s
+10	    d[i] = i;
+(gdb) p d[i][K[K0]
+$3 = 0
+(gdb) s
+8	  for (int i = 0; i < 5; i++)
+(gdb) p [i]
+A syntax error in expression, near `[i]'.
+(gdb) p [d][K[K[Kd[0]
+$4 = 0
+(gdb) s
+10	    d[i] = i;
+(gdb) s
+8	  for (int i = 0; i < 5; i++)
+(gdb) p [[Kd[1]
+$5 = 1
+(gdb) s
+10	    d[i] = i;
+(gdb) s
+8	  for (int i = 0; i < 5; i++)
+(gdb) d[Kp d[2]
+$6 = 2
+(gdb) o[Kp d[3]
+$7 = 0
+(gdb) s
+10	    d[i] = i;
+(gdb) s
+8	  for (int i = 0; i < 5; i++)
+(gdb) p d[3]
+$8 = 3
+(gdb) p[Ks
+10	    d[i] = i;
+(gdb) s
+8	  for (int i = 0; i < 5; i++)
+(gdb) po[K d[4]
+$9 = 4
+(gdb) s
+12	  s = Sum(d, 5);
+(gdb) p s
+$10 = 32767
+(gdb) p &s
+$11 = (int *) [34m0x7fffffffdee4[m
+(gdb) s
+[33mSum[m ([36mp[m=0x7fffffffdef0, [36mk[m=0) at [32ms16f.cpp[m:4
+4	{
+(gdb) list
+1	#include "hw06.h"
+2	
+3	int Sum(int *p, int k)
+4	{
+5	  int i;
+6	  int sum = 0;
+7	  for (i = 0; i < k; ++i)
+8	  {
+9	    sum += *(p + i);
+10	  }
+(gdb) b 3[K4
+Breakpoint 2 at [34m0x55555555531b[m: file [32ms16f.cpp[m, line 4.
+(gdb) s
+6	  int sum = 0;
+(gdb) p i
+$12 = -135807959
+(gdb) p &i
+$13 = (int *) [34m0x7fffffffdec8[m
+(gdb) p sum
+$14 = 32767
+(gdb) s
+7	  for (i = 0; i < k; ++i)
+(gdb) p sum
+$15 = 0
+(gdb) p[Kp &sum
+$16 = (int *) [34m0x7fffffffdecc[m
+(gdb) p p
+$17 = (int *) [34m0x55555556aeb0[m
+(gdb) p k
+$18 = 5
+(gdb) p &k
+$19 = (int *) [34m0x7fffffffdeb4[m
+(gdb) s
+9	    sum += *(p + i);
+(gdb) s
+7	  for (i = 0; i < k; ++i)
+(gdb) p sum
+$20 = 0
+(gdb) s
+9	    sum += *(p + i);
+(gdb) s
+7	  for (i = 0; i < k; ++i)
+(gdb) p sum
+$21 = 1
+(gdb) s
+9	    sum += *(p + i);
+(gdb) s
+7	  for (i = 0; i < k; ++i)
+(gdb) p sum
+$22 = 3
+(gdb) s
+9	    sum += *(p + i);
+(gdb) s
+7	  for (i = 0; i < k; ++i)
+(gdb) p sum
+$23 = 6
+(gdb) s
+9	    sum += *(p + i);
+(gdb) s
+7	  for (i = 0; i < k; ++i)
+(gdb) p sum
+$24 = 10
+(gdb) s
+11	  return sum;
+(gdb) p sum
+$25 = 10
+(gdb) s
+12	}
+(gdb) s
+[33mmain[m () at [32ms16.cpp[m:14
+14	  std::cout << "s: " << s << std::endl;
+(gdb) p s
+$26 = 10
+(gdb) p &s
+$27 = (int *) [34m0x7fffffffdee4[m
+(gdb) s
+s: 10
+16	  delete[] d;
+(gdb) s
+17	  return 0;
+(gdb) s
+18	}
+(gdb) s
+[33m__libc_start_main[m ([36mmain[m=0x555555555209 <main()>, [36margc[m=1, [36margv[m=0x7fffffffdfe8, [m
+    [m[36minit[m=<optimized out>, [36mfini[m=<optimized out>, [36mrtld_fini[m=<optimized out>, [m
+    [m[36mstack_end[m=0x7fffffffdfd8) at [32m../csu/libc-start.c[m:342
+342	../csu/libc-start.c: No such file or directory.
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 46338] will be killed.
+
+Quit anyway? (y or n) y
+]0;reaper@REAPER: ~/CS1B/06/s16[01;32mreaper@REAPER[00m:[01;34m~/CS1B/06/s16[00m$ exit
+exit
+
+Script done on 2020-10-22 20:01:39-07:00 [COMMAND_EXIT_CODE="0"]
