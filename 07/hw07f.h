@@ -37,6 +37,7 @@ struct PlayerUnit
   int nRushYds;
 };
 
+void menu(List *lst, bool &bShowOnce);
 void popList(List *lst, std::string szFileName);
 void addRec(List *lst);
 void delRec(List *lst);

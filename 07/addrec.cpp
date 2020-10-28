@@ -20,7 +20,7 @@ void addRec(List *lst)
     pLast = pTmp;
     lst->pLast = pTmp;
 
-    std::cout << "Enter Player Name: ";
+    std::cout << "\nEnter Player Name: ";
     std::getline(std::cin, pTmp->pUnit->szName);
     std::cout << "Enter Player Position: ";
     std::getline(std::cin, pTmp->pUnit->szPos);
@@ -34,6 +34,7 @@ void addRec(List *lst)
     std::cin >> pTmp->pUnit->nRecvYds;
     std::cout << "Enter Player's Rushing Yards: ";
     std::cin >> pTmp->pUnit->nRushYds;
+    std::cout << std::endl;
 
     ++lst->nLen;
   }

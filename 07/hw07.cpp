@@ -3,6 +3,8 @@
 
 int main()
 {
+  char choice = 'y';
+  bool bOnce = true;
   List *lst = new List;
   lst->pFirst = nullptr;
   lst->pLast = nullptr;
@@ -10,15 +12,17 @@ int main()
 
   popList(lst, "hw07db.txt");
 
-  addRec(lst);
-
-  delRec(lst);
-
-  showRec(lst);
-
-  showRecs(lst);
-
-  saveExit(lst, "hw07db.txt");
+  while (choice == 'y')
+  {
+    menu(lst, bOnce);
+    std::cout << "Would you like to continue? (y/n): ";
+    std::cin >> choice;
+    if (std::tolower(choice) != 'y')
+    {
+      saveExit(lst, "hw07db.txt");
+      break;
+    }
+  }
 
   for (Node *node = lst->pFirst->pNext; node; node = node->pNext)
   {

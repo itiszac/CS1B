@@ -7,8 +7,6 @@ void delRec(List *lst)
     std::string szName = "";
     std::locale loc;
     std::cout << "Enter Player to delete: ";
-    std::cin.clear();
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, szName);
     for (Node *pTmp = lst->pFirst; pTmp; pTmp = pTmp->pNext)
     {
