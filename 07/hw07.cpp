@@ -3,35 +3,19 @@
 
 int main()
 {
+  bool bDisplay = true;
   char choice = 'y';
-  bool bOnce = true;
   List *lst = new List;
   lst->pFirst = nullptr;
   lst->pLast = nullptr;
   lst->nLen = 0;
-
-  popList(lst, "hw07db.txt");
-
-  while (choice == 'y')
+  popList(lst, FILENAME);
+  while (tolower(choice) == 'y')
   {
-    menu(lst, bOnce);
+    menu(lst, bDisplay);
     std::cout << "Would you like to continue? (y/n): ";
     std::cin >> choice;
-    if (std::tolower(choice) != 'y')
-    {
-      saveExit(lst, "hw07db.txt");
-      break;
-    }
   }
-
-  for (Node *node = lst->pFirst->pNext; node; node = node->pNext)
-  {
-    delete node->pPrev->pUnit;
-    delete node->pPrev;
-  }
-  delete lst->pLast->pUnit;
-  delete lst->pLast;
-  delete lst;
-
+  saveExit(lst, FILENAME);
   return 0;
 }

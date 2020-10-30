@@ -16,5 +16,14 @@ void saveExit(List *lst, std::string szFileName)
       }
     }
     fs.close();
+    for (Node *node = lst->pFirst->pNext; node; node = node->pNext)
+    {
+      delete node->pPrev->pUnit;
+      delete node->pPrev;
+    }
+    delete lst->pLast->pUnit;
+    delete lst->pLast;
+    delete lst;
   }
+  std::cout << "Exiting program, good bye!" << std::endl;
 }

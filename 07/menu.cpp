@@ -1,29 +1,27 @@
 #include "hw07f.h"
 
-void menu(List *lst, bool &bShowOnce)
+void menu(List *lst, bool &bDisplay)
 {
   /*
    * Displays a menu that the user interacts with
    *
    * Args:
-   *  bShowOnce (bool): used to display the initial welcome message once
+   *  lst (List): The pointer that holds the nodes of linkedlist
    * Returns:
    *  None
    */
-  if (bShowOnce)
+  if (bDisplay)
   {
     std::cout
         << "------------------------------------------------------------------------------\n"
         << "|                                                                            |\n"
         << "|                       Welcome to the Football Database                     |\n"
         << "|                                                                            |\n"
-        << "------------------------------------------------------------------------------";
-
-    bShowOnce = false;
+        << "------------------------------------------------------------------------------\n\n";
+    bDisplay = false;
   }
-
   std::cout
-      << "\n\n------------------------------------------------------------------------------\n"
+      << "------------------------------------------------------------------------------\n"
       << "|                                Menu Options                                |\n"
       << "------------------------------------------------------------------------------\n"
       << "1.) Display all players\n"
@@ -31,34 +29,33 @@ void menu(List *lst, bool &bShowOnce)
       << "3.) Add a player\n"
       << "4.) Update a player\n"
       << "5.) Delete a player\n\n";
-
   while (true)
   {
-    int choice;
-    std::cout << "Choose an option: ";
-    std::cin >> choice;
+    int option = -1;
+    std::cout << "Enter an option: ";
+    std::cin >> option;
     std::cin.clear();
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     if (!std::cin.fail())
     {
-      if (choice == 1)
+      if (option == 1)
       {
         return showRecs(lst);
       }
-      else if (choice == 2)
+      else if (option == 2)
       {
         return showRec(lst);
       }
-      else if (choice == 3)
+      else if (option == 3)
       {
         return addRec(lst);
       }
-      else if (choice == 4)
+      else if (option == 4)
       {
         std::cout << "Need to code this.." << std::endl;
-        return;
+        break;
       }
-      else if (choice == 5)
+      else if (option == 5)
       {
         return delRec(lst);
       }
