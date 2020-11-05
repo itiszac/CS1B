@@ -2,8 +2,8 @@ CC=g++
 
 all: hw07
 
-hw07: menu.o poplist.o addrec.o delrec.o showrec.o showrecs.o exit.o hw07.cpp hw07.h
-	$(CC) hw07.cpp -o hw07 menu.o poplist.o addrec.o delrec.o showrec.o showrecs.o exit.o
+hw07: menu.o poplist.o addrec.o delrec.o updaterec.o showrec.o showrecs.o exit.o hw07.cpp hw07.h
+	$(CC) hw07.cpp -o hw07 menu.o poplist.o addrec.o delrec.o updaterec.o showrec.o showrecs.o exit.o
 
 menu.o: menu.cpp hw07f.h
 	$(CC) -c menu.cpp -o menu.o
@@ -16,6 +16,9 @@ addrec.o: addrec.cpp hw07f.h
 
 delrec.o: delrec.cpp hw07f.h
 	$(CC) -c delrec.cpp -o delrec.o
+
+updaterec.o: updaterec.cpp hw07f.h
+	$(CC) -c updaterec.cpp -o updaterec.o
 
 showrec.o: showrec.cpp hw07f.h
 	$(CC) -c showrec.cpp -o showrec.o

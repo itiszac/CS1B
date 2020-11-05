@@ -41,6 +41,7 @@ void menu(List *lst, bool &bDisplay);
 void popList(List *lst, std::string szFileName);
 void addRec(List *lst);
 void delRec(List *lst);
+void updateRec(List *lst);
 void showRec(List *lst);
 void showRecs(List *lst);
 void saveExit(List *lst, std::string szFileName);

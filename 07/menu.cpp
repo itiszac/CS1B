@@ -52,8 +52,7 @@ void menu(List *lst, bool &bDisplay)
       }
       else if (option == 4)
       {
-        std::cout << "Need to code this.." << std::endl;
-        break;
+        return updateRec(lst);
       }
       else if (option == 5)
       {
