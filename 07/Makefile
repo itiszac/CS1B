@@ -33,4 +33,4 @@ clean:
 	rm hw07 *.o
 
 tar:
-	tar cvf hw07.tar hw07.cpp hw07.h hw07f.h poplist.cpp Makefile hw07.scr
+	tar cvf hw07.tar hw07.cpp hw07.h hw07f.h poplist.cpp addrec.cpp delrec.cpp updaterec.cpp showrec.cpp showrecs.cpp exit.cpp hw07db.txt Makefile hw07.scr

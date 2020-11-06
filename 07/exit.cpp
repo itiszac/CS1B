@@ -2,6 +2,15 @@
 
 void saveExit(List *lst, std::string szFileName)
 {
+  /*
+  * Iterates the LinkedList and writes to specified file the contents of each node
+  *
+  * Args:
+  *  lst (List): The pointer that holds the nodes of linkedlist
+  *  szFileName (string): The file directory + file name
+  * Returns:
+  *  None
+  */
   if (lst)
   {
     std::ofstream fs(szFileName, std::fstream::out | std::fstream::trunc);

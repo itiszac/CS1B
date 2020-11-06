@@ -2,6 +2,14 @@
 
 void showRecs(List *lst)
 {
+  /*
+   * Iterate LinkedList and display values of each node
+   *
+   * Args:
+   *  lst (List): The player list pointer
+   * Returns:
+   *  None
+   */
   if (lst)
   {
     for (Node *pTmp = lst->pFirst; pTmp; pTmp = pTmp->pNext)

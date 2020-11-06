@@ -36,8 +36,10 @@ void popList(List *lst, std::string szFileName)
           std::stringstream ss(szLine);
           for (int i = 0; i < 7; i++)
           {
+            // delimit by , and assign each value to temp[i]
             std::getline(ss, tmp[i], ',') >> std::ws;
           }
+          // initialize node
           Node *pTmp = new Node;
           pTmp->pList = lst;
           pTmp->pNext = nullptr;

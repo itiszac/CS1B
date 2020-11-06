@@ -3,8 +3,7 @@
 void delRec(List *lst)
 {
   /*
-  * Search the array for player by name and ask user if they
-  * want to display results
+  * Search the array for player by name and delete node
   *
   * Args:
   *  lst (List): The pointer that holds the nodes of linkedlist

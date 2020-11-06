@@ -1,0 +1,749 @@
+Script started on 2020-11-05 19:14:01-08:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ ls -l[K[K-l
+total 172
+-rw-rw-r-- 1 reaper reaper  1234 Nov  5 15:05 addrec.cpp
+-rw-rw-r-- 1 reaper reaper  5472 Nov  5 15:11 addrec.o
+-rw-rw-r-- 1 reaper reaper   906 Nov  5 15:10 delrec.cpp
+-rw-rw-r-- 1 reaper reaper  7184 Nov  5 15:11 delrec.o
+-rw-rw-r-- 1 reaper reaper  1098 Nov  5 15:10 exit.cpp
+-rw-rw-r-- 1 reaper reaper  6984 Nov  5 15:11 exit.o
+-rwxrwxr-x 1 reaper reaper 41280 Nov  5 15:15 [0m[01;32mhw07[0m
+-rw-rw-r-- 1 reaper reaper   398 Oct 29 19:20 hw07.cpp
+-rw-rw-r-- 1 reaper reaper   189 Nov  5 15:17 hw07db.txt
+-rw-rw-r-- 1 reaper reaper   145 Oct 27 19:59 hw07db.txttt
+-rw-rw-r-- 1 reaper reaper   768 Nov  5 00:37 hw07f.h
+-rw-rw-r-- 1 reaper reaper   693 Nov  5 15:15 hw07.h
+-rw-rw-r-- 1 reaper reaper     0 Nov  5 19:14 hw07.scr
+-rw-rw-r-- 1 reaper reaper   829 Nov  5 01:36 Makefile
+-rw-rw-r-- 1 reaper reaper  1896 Nov  5 15:10 menu.cpp
+-rw-rw-r-- 1 reaper reaper  5728 Nov  5 15:11 menu.o
+-rw-rw-r-- 1 reaper reaper  1931 Nov  5 15:10 poplist.cpp
+-rw-rw-r-- 1 reaper reaper 12712 Nov  5 15:11 poplist.o
+-rw-rw-r-- 1 reaper reaper   964 Nov  5 15:10 showrec.cpp
+-rw-rw-r-- 1 reaper reaper  7688 Nov  5 15:11 showrec.o
+-rw-rw-r-- 1 reaper reaper   699 Nov  5 15:10 showrecs.cpp
+-rw-rw-r-- 1 reaper reaper  4152 Nov  5 15:11 showrecs.o
+-rw-rw-r-- 1 reaper reaper  1130 Nov  5 15:10 updaterec.cpp
+-rw-rw-r-- 1 reaper reaper  7496 Nov  5 15:11 updaterec.o
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ touch hw07.h
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ make all
+g++ hw07.cpp -o hw07 menu.o poplist.o addrec.o delrec.o updaterec.o showrec.o showrecs.o exit.o
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ ./hw0[K[K[K[K/hw07 
+------------------------------------------------------------------------------
+|                                                                            |
+|                       Welcome to the Football Database                     |
+|                                                                            |
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 1
+
+Player Name: Zach Meyer
+Player Position: Quarterback
+Player Score: 999
+Player Catches: 987
+Player Receiving Yards: 432
+Player Passing Yards: 654
+Player Rushing Yards: 123
+
+
+Player Name: Alex
+Player Position: Running Back
+Player Score: 666
+Player Catches: 34
+Player Receiving Yards: 34
+Player Passing Yards: 5
+Player Rushing Yards: 6
+
+
+Player Name: Stephen
+Player Position: Idk
+Player Score: 321
+Player Catches: 23
+Player Receiving Yards: 23
+Player Passing Yards: 432
+Player Rushing Yards: 2
+
+
+Player Name: Grant
+Player Position: Stocks
+Player Score: 777
+Player Catches: 423
+Player Receiving Yards: 34
+Player Passing Yards: 543
+Player Rushing Yards: 3
+
+
+Player Name: Brendan
+Player Position: ok
+Player Score: 5
+Player Catches: 324
+Player Receiving Yards: 34
+Player Passing Yards: 532
+Player Rushing Yards: 4
+
+Would you like to continue? (y/n): n
+Exiting program, good bye!
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ ls
+addrec.cpp  exit.cpp  hw07db.txt    hw07.scr  poplist.cpp  showrecs.cpp
+addrec.o    exit.o    hw07db.txttt  Makefile  poplist.o    showrecs.o
+delrec.cpp  [0m[01;32mhw07[0m      hw07f.h       menu.cpp  showrec.cpp  updaterec.cpp
+delrec.o    hw07.cpp  hw07.h        menu.o    showrec.o    updaterec.o
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ rm hw06[K7db.txt
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ ./hw07 
+------------------------------------------------------------------------------
+|                                                                            |
+|                       Welcome to the Football Database                     |
+|                                                                            |
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 1
+Would you like to continue? (y/n): yt 
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 3
+
+Enter Player Name: John  
+Enter Player Position: aa
+Enter Player's Score: 123
+Enter Player's Catches: 213
+Enter Player's Passing Yards: 213
+Enter Player's Receiving Yards: 123
+Enter Player's Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 3
+
+Enter Player Name: Jake
+Enter Player Position: pk
+Enter Player's Score: 312
+Enter Player's Catches: 4
+Enter Player's Passing Yards: 23
+Enter Player's Receiving Yards: 23
+Enter Player's Rushing Yards: 23
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 3
+
+Enter Player Name: Zach
+Enter Player Position: 123
+Enter Player's Score: 213
+Enter Player's Catches: 123
+Enter Player's Passing Yards: 213
+Enter Player's Receiving Yards: 213
+Enter Player's Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 3
+
+Enter Player Name: Joey
+Enter Player Position: 123
+Enter Player's Score: 123
+Enter Player's Catches: 123
+Enter Player's Passing Yards: 123
+Enter Player's Receiving Yards: 123
+Enter Player's Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 1
+
+Player Name: John
+Player Position: aa
+Player Score: 123
+Player Catches: 213
+Player Receiving Yards: 123
+Player Passing Yards: 213
+Player Rushing Yards: 123
+
+
+Player Name: Jake
+Player Position: pk
+Player Score: 312
+Player Catches: 4
+Player Receiving Yards: 23
+Player Passing Yards: 23
+Player Rushing Yards: 23
+
+
+Player Name: Zach
+Player Position: 123
+Player Score: 213
+Player Catches: 123
+Player Receiving Yards: 213
+Player Passing Yards: 213
+Player Rushing Yards: 123
+
+
+Player Name: Joey
+Player Position: 123
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+Would you like to continue? (y/n): n
+Exiting program, good bye!
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ ./hw07 
+------------------------------------------------------------------------------
+|                                                                            |
+|                       Welcome to the Football Database                     |
+|                                                                            |
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 1
+
+Player Name: John
+Player Position: aa
+Player Score: 123
+Player Catches: 213
+Player Receiving Yards: 123
+Player Passing Yards: 213
+Player Rushing Yards: 123
+
+
+Player Name: Jake
+Player Position: pk
+Player Score: 312
+Player Catches: 4
+Player Receiving Yards: 23
+Player Passing Yards: 23
+Player Rushing Yards: 23
+
+
+Player Name: Zach
+Player Position: 123
+Player Score: 213
+Player Catches: 123
+Player Receiving Yards: 213
+Player Passing Yards: 213
+Player Rushing Yards: 123
+
+
+Player Name: Joey
+Player Position: 123
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 2
+
+Enter player to search for: Zach
+
+Player Name: Zach
+Player Position: 123
+Player Score: 213
+Player Catches: 123
+Player Receiving Yards: 213
+Player Passing Yards: 213
+Player Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 3
+
+Enter Player Name: Grant
+Enter Player Position: ll
+Enter Player's Score: 123
+Enter Player's Catches: 123
+Enter Player's Passing Yards: 123
+Enter Player's Receiving Yards: 213
+Enter Player's Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 4
+
+Enter Player to update: Zach
+Player was found..
+
+Enter Player Position: Quarterback
+Enter Player's Score: 321
+Enter Player's Catches: 321
+Enter Player's Passing Yards: 321
+Enter Player's Receiving Yards: 321
+Enter Player's Rushing Yards: 321
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 1
+
+Player Name: John
+Player Position: aa
+Player Score: 123
+Player Catches: 213
+Player Receiving Yards: 123
+Player Passing Yards: 213
+Player Rushing Yards: 123
+
+
+Player Name: Jake
+Player Position: pk
+Player Score: 312
+Player Catches: 4
+Player Receiving Yards: 23
+Player Passing Yards: 23
+Player Rushing Yards: 23
+
+
+Player Name: Zach
+Player Position: Quarterback
+Player Score: 321
+Player Catches: 321
+Player Receiving Yards: 321
+Player Passing Yards: 321
+Player Rushing Yards: 321
+
+
+Player Name: Joey
+Player Position: 123
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+
+Player Name: Grant
+Player Position: ll
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 213
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 5
+
+Enter Player to delete: Grant
+Would you like to continue? (y/n): n
+Exiting program, good bye!
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ ls -la
+total 196
+drwxrwxr-x  3 reaper reaper  4096 Nov  5 19:15 [0m[01;34m.[0m
+drwxrwxr-x 10 reaper reaper  4096 Nov  5 14:10 [01;34m..[0m
+-rw-rw-r--  1 reaper reaper  1234 Nov  5 15:05 addrec.cpp
+-rw-rw-r--  1 reaper reaper  5472 Nov  5 15:11 addrec.o
+-rw-rw-r--  1 reaper reaper   906 Nov  5 15:10 delrec.cpp
+-rw-rw-r--  1 reaper reaper  7184 Nov  5 15:11 delrec.o
+-rw-rw-r--  1 reaper reaper  1098 Nov  5 15:10 exit.cpp
+-rw-rw-r--  1 reaper reaper  6984 Nov  5 15:11 exit.o
+-rwxrwxr-x  1 reaper reaper 41280 Nov  5 19:14 [01;32mhw07[0m
+-rw-rw-r--  1 reaper reaper   398 Oct 29 19:20 hw07.cpp
+-rw-rw-r--  1 reaper reaper   141 Nov  5 19:17 hw07db.txt
+-rw-rw-r--  1 reaper reaper   145 Oct 27 19:59 hw07db.txttt
+-rw-rw-r--  1 reaper reaper   768 Nov  5 00:37 hw07f.h
+-rw-rw-r--  1 reaper reaper   693 Nov  5 19:14 hw07.h
+-rw-rw-r--  1 reaper reaper 12288 Nov  5 19:16 hw07.scr
+-rw-rw-r--  1 reaper reaper   829 Nov  5 01:36 Makefile
+-rw-rw-r--  1 reaper reaper  1896 Nov  5 15:10 menu.cpp
+-rw-rw-r--  1 reaper reaper  5728 Nov  5 15:11 menu.o
+-rw-rw-r--  1 reaper reaper  1931 Nov  5 15:10 poplist.cpp
+-rw-rw-r--  1 reaper reaper 12712 Nov  5 15:11 poplist.o
+-rw-rw-r--  1 reaper reaper   964 Nov  5 15:10 showrec.cpp
+-rw-rw-r--  1 reaper reaper  7688 Nov  5 15:11 showrec.o
+-rw-rw-r--  1 reaper reaper   699 Nov  5 15:10 showrecs.cpp
+-rw-rw-r--  1 reaper reaper  4152 Nov  5 15:11 showrecs.o
+-rw-rw-r--  1 reaper reaper  1130 Nov  5 15:10 updaterec.cpp
+-rw-rw-r--  1 reaper reaper  7496 Nov  5 15:11 updaterec.o
+drwxrwxr-x  2 reaper reaper  4096 Oct 25 20:02 [01;34m.vscode[0m
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ cat hw07db.txt
+John, aa, 123, 213, 213, 123, 123
+Jake, pk, 312, 4, 23, 23, 23
+Zach, Quarterback, 321, 321, 321, 321, 321
+Joey, 123, 123, 123, 123, 123, 123
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ valgrind hw[K[K./hw07 
+==691833== Memcheck, a memory error detector
+==691833== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==691833== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==691833== Command: ./hw07
+==691833== 
+------------------------------------------------------------------------------
+|                                                                            |
+|                       Welcome to the Football Database                     |
+|                                                                            |
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 1
+
+Player Name: John
+Player Position: aa
+Player Score: 123
+Player Catches: 213
+Player Receiving Yards: 123
+Player Passing Yards: 213
+Player Rushing Yards: 123
+
+
+Player Name: Jake
+Player Position: pk
+Player Score: 312
+Player Catches: 4
+Player Receiving Yards: 23
+Player Passing Yards: 23
+Player Rushing Yards: 23
+
+
+Player Name: Zach
+Player Position: Quarterback
+Player Score: 321
+Player Catches: 321
+Player Receiving Yards: 321
+Player Passing Yards: 321
+Player Rushing Yards: 321
+
+
+Player Name: Joey
+Player Position: 123
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 3
+
+Enter Player Name: Hue gh   an
+Enter Player Position: ee
+Enter Player's Score: 123
+Enter Player's Catches: 123
+Enter Player's Passing Yards: 123
+Enter Player's Receiving Yards: 123
+Enter Player's Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 1
+
+Player Name: John
+Player Position: aa
+Player Score: 123
+Player Catches: 213
+Player Receiving Yards: 123
+Player Passing Yards: 213
+Player Rushing Yards: 123
+
+
+Player Name: Jake
+Player Position: pk
+Player Score: 312
+Player Catches: 4
+Player Receiving Yards: 23
+Player Passing Yards: 23
+Player Rushing Yards: 23
+
+
+Player Name: Zach
+Player Position: Quarterback
+Player Score: 321
+Player Catches: 321
+Player Receiving Yards: 321
+Player Passing Yards: 321
+Player Rushing Yards: 321
+
+
+Player Name: Joey
+Player Position: 123
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+
+Player Name: Han
+Player Position: ee
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 5
+
+Enter Player to delete: Zach
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 1
+
+Player Name: John
+Player Position: aa
+Player Score: 123
+Player Catches: 213
+Player Receiving Yards: 123
+Player Passing Yards: 213
+Player Rushing Yards: 123
+
+
+Player Name: Jake
+Player Position: pk
+Player Score: 312
+Player Catches: 4
+Player Receiving Yards: 23
+Player Passing Yards: 23
+Player Rushing Yards: 23
+
+
+Player Name: Joey
+Player Position: 123
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+
+Player Name: Han
+Player Position: ee
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+Would you like to continue? (y/n): 5 y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 5
+
+Enter Player to delete: John
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 1
+
+Player Name: Jake
+Player Position: pk
+Player Score: 312
+Player Catches: 4
+Player Receiving Yards: 23
+Player Passing Yards: 23
+Player Rushing Yards: 23
+
+
+Player Name: Joey
+Player Position: 123
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+
+Player Name: Han
+Player Position: ee
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+Would you like to continue? (y/n): y
+------------------------------------------------------------------------------
+|                                Menu Options                                |
+------------------------------------------------------------------------------
+1.) Display all players
+2.) Search a player
+3.) Add a player
+4.) Update a player
+5.) Delete a player
+
+Enter an option: 2
+
+Enter player to search for: Joey
+
+Player Name: Joey
+Player Position: 123
+Player Score: 123
+Player Catches: 123
+Player Receiving Yards: 123
+Player Passing Yards: 123
+Player Rushing Yards: 123
+
+Would you like to continue? (y/n): n
+Exiting program, good bye!
+==691833== 
+==691833== HEAP SUMMARY:
+==691833==     in use at exit: 0 bytes in 0 blocks
+==691833==   total heap usage: 24 allocs, 24 frees, 92,946 bytes allocated
+==691833== 
+==691833== All heap blocks were freed -- no leaks are possible
+==691833== 
+==691833== For lists of detected and suppressed errors, rerun with: -s
+==691833== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+]0;reaper@REAPER: ~/CS1B/07[01;32mreaper@REAPER[00m:[01;34m~/CS1B/07[00m$ exit
+exit
+
+Script done on 2020-11-05 19:19:58-08:00 [COMMAND_EXIT_CODE="0"]

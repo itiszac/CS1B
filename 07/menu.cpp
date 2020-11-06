@@ -7,6 +7,7 @@ void menu(List *lst, bool &bDisplay)
    *
    * Args:
    *  lst (List): The pointer that holds the nodes of linkedlist
+   *  bDisplay (boolean): Indicates if menu should include header on first run.
    * Returns:
    *  None
    */

@@ -2,6 +2,14 @@
 
 void addRec(List *lst)
 {
+  /*
+  * Adds a new node to the LinkedList
+  *
+  * Args:
+  *  lst (List): The pointer that holds the nodes of linkedlist
+  * Returns:
+  *  None
+  */
   if (lst)
   {
     Node *pTmp = new Node;
