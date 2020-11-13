@@ -1,0 +1,69 @@
+Zachary Meyer
+11-12-2020
+HW08
+
+Watch the following video and take notes:
+https://youtu.be/lbXsrHGhBAU
+
+- In OOP you approach a problem by trying to break it down into data types.
+	- Come up with data types
+	- Look at what operations you need associated with those data types
+- In procedural programming you break a problem down into functions.
+- Examples of languages that have OOP design patterns:
+	- Static Typed Languages:
+		- C++
+		- C#
+		- Java
+	- Dynamically Typed Languages
+		- Javascript
+		- Python
+		- Ruby
+- JS uses prototypical inheritance while most other OOP languages use class based inheritance
+- Class and structs are data types consisting of fields and methods
+	- Field (Data Member)
+	- Method (Function Member)
+- Object is a piece of data
+- Encapsulation 
+	- Acts as an interface to object fields
+	- Fields can only be read/written by it's own class
+	- The only way to interact with the fields of a class is by invoking methods of the class (it's the methods themselves which interact with the fields of said class)
+- Public means it's visible everywhere
+- Private means it's visible only to methods within the class
+- Inheritance
+	- class can include all members from another class
+	- child class inherits parents parts
+	- Alternatively instead of saying subtype you could say descendant
+	- Alternatively isntead of saying supertype you could say ancestor
+	Ex: Animal is ancestor of Cat
+	Cat is a descendant of Animal
+	- Parent is a direct immediate ancestor
+	- Child is a direct immediate descendant
+	- The most obvious use for inheritance is when modeling real world objects
+- Multiple Inheritance
+	- Java / C# Don't allow this
+	- Trade off between simplicity and flexibility
+	- Allows us to take multiple mixes of class combining into one
+- Circular inheritance is not allowed in any language
+- Object class
+	- Every class inherits from another class
+- Override
+	- Redefine an inherited method
+- Methods live in namespace of class
+- Method calls are naturally polymorphic
+	- Ex: x.foo() depends upon type of x
+- Each instance of a class has its own copy of instance members
+- Class members belong to the class itself and not any instance
+- A class field represents a single piece of data
+- When invoked a class member has no instance passed to it
+- Java consists of entirely just classes
+- Constructors
+	- Ran when we instantiate a class
+- Interface
+	- Shares a set of methods in common
+	- In a staticly typed language like Java you must explicitly define an interface much like you define a class
+- Abstact class
+	- Class which is not meant to be instantiated
+	- Languages like Java you can define a class as abstact and the compiler will give an error if you attempt to instantiate the class
+- Prototypical Inheritance
+	- Javascript you can link objects together in which effectively you have an object which represents a class
+	- Most other languages have a formal class mechanism
