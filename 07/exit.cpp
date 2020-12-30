@@ -25,6 +25,7 @@ void saveExit(List *lst, std::string szFileName)
       }
     }
     fs.close();
+
     for (Node *node = lst->pFirst->pNext; node; node = node->pNext)
     {
       delete node->pPrev->pUnit;
